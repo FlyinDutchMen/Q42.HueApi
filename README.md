@@ -24,7 +24,7 @@ Before you can communicate with the Philips Hue Bridge, you need to find the bri
 
 	//For Windows 8 and .NET45 projects you can use the SSDPBridgeLocator which actually scans your network. 
 	//See the included BridgeDiscoveryTests and the specific .NET and .WinRT projects
-	IEnumerable<string> bridgeIPs = await locator.LocateBridgesAsync(TimeSpan.FromSeconds(5));
+	IEnumerable<LocatedBridge> locatedBridges = await locator.LocateBridgesAsync(TimeSpan.FromSeconds(5));
 ```
 	
 Register your application
